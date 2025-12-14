@@ -17,11 +17,22 @@ def get_input_scores():
     for habit in ITEMS.keys():
         score = 0
         for q in ITEMS[habit]["questions"]:
-            score += int ( input(f'{q}: ') )
+            nr = get_valid_input(q)
+            score += nr
         ITEMS[habit]['score']+=score
 
-def validate_input(item: str):
-    pass
+def get_valid_input(question: str):
+    while(1):
+        item = input(f'{question}: ')
+        if item.isdigit():
+            item = int(item)
+            if 0 > item or item > 7:
+                print("Number must be between 0 and 7!")
+            else:
+                break
+        else:
+            print("Please enter a number!")
+    return item
 
 #use the main() function for your program, define all other functions above main
 def main ():
