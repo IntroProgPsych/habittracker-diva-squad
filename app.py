@@ -6,11 +6,21 @@
 HABITS = ("SleepRoutine", "PhysicalActivity", "HealthyEating", "Mindfulness", "SocialConnection")
 
 ITEMS = {
-    HABITS[0]:{ 'score':0, "questions" : {"How many days per week do you go to bed at a consistent hour?",2,3} },
-    HABITS[1]:{ 'score':0, "questions" : {"How many days per week do you exercise for at least 20 minutes?",2,3} },
-    HABITS[2]:{ 'score':0, "questions" : {"How many days per week do you eat at least one healthy meal?",2,3} },
-    HABITS[3]:{ 'score':0, "questions" : {"How many days per week do you practice mindfulness?",2,3} },
-    HABITS[4]:{ 'score':0, "questions" : {"How many days per week do you spend meaningful time with others?",2,3} },
+    HABITS[0]:{ 'score':0, "questions" : {"do you go to bed at a consistent hour?",
+                                          "have you gotten more than 8 hours of sleep?",
+                                          "have you felt rested after waking up?"} },
+    HABITS[1]:{ 'score':0, "questions" : {"have you engaged in meaningful physical activity for an extended duration?(jogging, swimming, going to the gym, etc.)",
+                                          "have you engaged in long relaxing walks?",
+                                          "have you participated in group physical activites?(basketaball, voleyball, handball, etc.)"} },
+    HABITS[2]:{ 'score':0, "questions" : {"do you eat at least one healthy meal?",
+                                          "have you had at least 3 meals?",
+                                          "have you drank at least 2 liters of water?"} },
+    HABITS[3]:{ 'score':0, "questions" : {"do you practice mindfulness?",
+                                          "do you practiced self-reflection?",
+                                          "have you engaged in a relaxing activity for your mental-health?"} },
+    HABITS[4]:{ 'score':0, "questions" : {"did you have deep and/or emotional conversations with people that you care about and feel close to?",
+                                          "have you felt like you belong in your comunity?",
+                                          "have you felt like you related to the people around you?"} },
 }
 
 def get_input_scores():
