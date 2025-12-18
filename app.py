@@ -3,14 +3,14 @@
 
 #write any functions you need, below this line
 
-HABITS = ("sleep_routine", "physical_activity", "healthy_eatting", "mindfulness", "social_connection")
+HABITS = ("SleepRoutine", "PhysicalActivity", "HealthyEating", "Mindfulness", "SocialConnection")
 
 ITEMS = {
-    HABITS[0]:{ 'score':0, "questions" : {1,2,3} },
-    HABITS[1]:{ 'score':0, "questions" : {1,2,3} },
-    HABITS[2]:{ 'score':0, "questions" : {1,2,3} },
-    HABITS[3]:{ 'score':0, "questions" : {1,2,3} },
-    HABITS[4]:{ 'score':0, "questions" : {1,2,3} },
+    HABITS[0]:{ 'score':0, "questions" : {"How many days per week do you go to bed at a consistent hour?",2,3} },
+    HABITS[1]:{ 'score':0, "questions" : {"How many days per week do you exercise for at least 20 minutes?",2,3} },
+    HABITS[2]:{ 'score':0, "questions" : {"How many days per week do you eat at least one healthy meal?",2,3} },
+    HABITS[3]:{ 'score':0, "questions" : {"How many days per week do you practice mindfulness?",2,3} },
+    HABITS[4]:{ 'score':0, "questions" : {"How many days per week do you spend meaningful time with others?",2,3} },
 }
 
 def get_input_scores():
