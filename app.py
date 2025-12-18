@@ -45,17 +45,21 @@ def get_valid_input(question: str):
             print(f"{type(error).__name__}: Please enter a number!")
     return item
 
+def interpret_score(score):
+    interpretation = None
+    if score >= 12:
+        interpretation = "High"
+    elif score >= 6:
+        interpretation = "Moderate"
+    else:
+        interpretation = "Low"
+    return interpretation
+
 def compute_category_scores():
     print('')
     for habit in HABITS:
         score = ITEMS[habit]['score']
-        interpretation = None
-        if score >= 12:
-            interpretation = "High"
-        elif score >= 6:
-            interpretation = "Moderate"
-        else:
-            interpretation = "Low"
+        interpretation = interpret_score(score)
         print(f'{habit}: score -> {score} < {interpretation} adherence >')
 
 #use the main() function for your program, define all other functions above main
