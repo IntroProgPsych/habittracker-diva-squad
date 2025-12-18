@@ -26,7 +26,7 @@ ITEMS = {
 def get_input_scores():
     for habit in ITEMS.keys():
         score = 0
-        print(f'\n{'-'*5}{habit}{'-'*5}\n')
+        print(f"\n{'-'*5}{habit}{'-'*5}\n")
         for q in ITEMS[habit]["questions"]:
             nr = get_valid_input(q)
             score += nr
