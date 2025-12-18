@@ -55,7 +55,7 @@ def interpret_score(score):
         interpretation = "Low"
     return interpretation
 
-def compute_category_scores():
+def display_category_scores():
     print('')
     for habit in HABITS:
         score = ITEMS[habit]['score']
@@ -66,7 +66,7 @@ def compute_category_scores():
 def main ():
     #use print statements such as this one, to mark important points in the application, to help you with debugging
     get_input_scores()
-    compute_category_scores()
+    display_category_scores()
 
 #please do not change the lines below, they are needed for your tests to work properly
 #write all your code in the current file, and all your tests in the tests.py file
