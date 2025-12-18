@@ -33,16 +33,21 @@ def get_input_scores():
 
 def get_valid_input(question: str):
     while(1):
-        item = input(f'{question}: ')
-        if item.isdigit():
+        try:
+            item = input(f'How many days per week {question}\n ')
             item = int(item)
             if 0 > item or item > 7:
                 print("Number must be between 0 and 7!")
-            else:
-                break
-        else:
-            print("Please enter a number!")
+                continue
+            break
+        except Exception as error:
+            print(f"{type(error).__name__}: Please enter a number!")
     return item
+
+def compute_category_score(score):
+    for habit in HABITS:
+        print(f'{habit}: ', end='')
+        
 
 #use the main() function for your program, define all other functions above main
 def main ():
