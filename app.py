@@ -26,6 +26,7 @@ ITEMS = {
 def get_input_scores():
     for habit in ITEMS.keys():
         score = 0
+        print(f'\n{'-'*5}{habit}{'-'*5}\n')
         for q in ITEMS[habit]["questions"]:
             nr = get_valid_input(q)
             score += nr
@@ -34,7 +35,7 @@ def get_input_scores():
 def get_valid_input(question: str):
     while(1):
         try:
-            item = input(f'How many days per week {question}\n ')
+            item = input(f'How many days per week {question}\nanswer: ')
             item = int(item)
             if 0 > item or item > 7:
                 print("Number must be between 0 and 7!")
@@ -44,16 +45,24 @@ def get_valid_input(question: str):
             print(f"{type(error).__name__}: Please enter a number!")
     return item
 
-def compute_category_score(score):
+def compute_category_scores():
+    print('')
     for habit in HABITS:
-        print(f'{habit}: ', end='')
-        
+        score = ITEMS[habit]['score']
+        interpretation = None
+        if score >= 12:
+            interpretation = "High"
+        elif score >= 6:
+            interpretation = "Moderate"
+        else:
+            interpretation = "Low"
+        print(f'{habit}: score -> {score} < {interpretation} adherence >')
 
 #use the main() function for your program, define all other functions above main
 def main ():
     #use print statements such as this one, to mark important points in the application, to help you with debugging
-    print("Starting application...")
     get_input_scores()
+    compute_category_scores()
 
 #please do not change the lines below, they are needed for your tests to work properly
 #write all your code in the current file, and all your tests in the tests.py file
