@@ -9,7 +9,7 @@ from app import interpret_score
 #write your test suite here, in the main() function
 def main():
     #call all your tets here, one on each line
-    print("Starting tests suite...")
+    unittest.main()
 
 class TestInterpretScore(unittest.TestCase):
     def test_interpret_score(self):
@@ -22,4 +22,4 @@ class TestInterpretScore(unittest.TestCase):
 
 #please do not change the lines below
 if __name__ == "__main__":
-    unittest.main()
+    main()

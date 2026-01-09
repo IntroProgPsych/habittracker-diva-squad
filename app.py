@@ -27,6 +27,8 @@ def get_input_scores():
     for habit in ITEMS.keys():
         score = 0
         print(f"\n{'-'*5}{habit}{'-'*5}\n")
+        # q = question
+        # loop gets score for every habit category
         for q in ITEMS[habit]["questions"]:
             nr = get_valid_input(q)
             score += nr
@@ -64,7 +66,6 @@ def display_category_scores():
 
 #use the main() function for your program, define all other functions above main
 def main ():
-    #use print statements such as this one, to mark important points in the application, to help you with debugging
     get_input_scores()
     display_category_scores()
 
