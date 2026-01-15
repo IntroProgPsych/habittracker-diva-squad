@@ -48,14 +48,11 @@ def get_valid_input(question: str):
     return item
 
 def interpret_score(score):
-    interpretation = None
     if score >= 12:
-        interpretation = "High"
+        return "High"
     elif score >= 6:
-        interpretation = "Moderate"
-    else:
-        interpretation = "Low"
-    return interpretation
+        return "Moderate"
+    return "Low"
 
 def display_category_scores():
     print('')
